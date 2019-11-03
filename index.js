@@ -24,14 +24,12 @@ function viewCart() {
   } else {
     var itemString = ""
     for (let i = 0; i < cart.length; i++) {
-      // check if AND is needed before last item.
-      // it's needed if there's more than 1 item in cart, and if it's the last item.
+      // check if AND is needed if there's more than 1 item in cart and if it's the last item.
       if (cart.length > 1 && i == cart.length - 1) {
         itemString += 'and ';
       }
       itemString += `${cart[i].itemName} at $${cart[i].itemPrice}`
-      // check if comma is needed after item.
-      // it's needed if there's more than 1 item in cart, and if it's not the last item.
+      // check if comma is needed if there's more than 1 item in cart and if it's not the last item.
       if (cart.length > 1 && i !== cart.length - 1) {
         itemString += ', ';
       }
