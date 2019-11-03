@@ -39,7 +39,6 @@ function viewCart() {
 
 function total() {
   let priceTotal = 0;
-  //loop through cart array and add prices to priceTotal
   for (let i = 0; i < cart.length; i++) {
     priceTotal += cart[i].itemPrice;
   } return priceTotal;
