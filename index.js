@@ -1,4 +1,4 @@
-var cart = [];
+let cart = [];
 
 function getCart() {
  return cart;
@@ -22,7 +22,7 @@ function viewCart() {
   if (cart.length === 0) {
     return 'Your shopping cart is empty.'
   } else {
-    var itemString = ""
+    let itemString = ""
     for (let i = 0; i < cart.length; i++) {
       // check if AND is needed if there's more than 1 item in cart and if it's the last item.
       if (cart.length > 1 && i == cart.length - 1) {
@@ -62,7 +62,7 @@ function placeOrder(cardNumber) {
   if (cardNumber == null) {
     return 'Sorry, we don\'t have a credit card on file for you.'
   } else {
-    var sentence = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
+    let sentence = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
     cart = [];
     return sentence;
   }
