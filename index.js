@@ -48,7 +48,6 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // check if 'item' matches looped through item in cart.
   let itemBool = false;
   for (let i = 0; i < cart.length; i++) {
     // check if current item is equal to current index.
